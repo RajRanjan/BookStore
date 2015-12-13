@@ -1,0 +1,33 @@
+
+<ion-view view-title="Book-Store">
+   
+    <ion-content>
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="Search books here.." ng-model="searchForm.searchText">
+                </label>
+                <button class="button button-small button-positive" ng-click="searchBooks(searchForm.searchText,1)">
+                    Search
+                </button>
+            </div>
+        </div>
+        <div ng-show="isSearchSet" class="list" ng-repeat="eachBook in bookList" ui-sref="bookDetails({bookId: eachBook.ID})">
+            <a class="item item-thumbnail-left ">
+                <img ng-src="{{eachBook.Image}}">
+                <h2 style="color:#656262">{{eachBook.Title}}</h2>
+                <p >{{eachBook.SubTitle}}</p>
+            </a>
+        </div>
+    </ion-content>
+   
+</ion-view>
+ <ion-footer-bar align-title="center" class="bar-positive" ng-show="isSearchSet">
+        <div class="buttons" ng-click="previousPage()" ng-show="previousPageNumber>0">
+            <button class="button">Previous</button>
+        </div>
+        <h1 class="title">Current Page : {{currentPageNumber}}</h1>
+        <div class="buttons">
+            <button class="button" ng-click="nextPage()">Next</button>
+        </div>
+    </ion-footer-bar>

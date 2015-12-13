@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+.pane {
+	background-color: #F8F8F8;
+}
+.readingText {
+	text-align: justify;
+	line-height: 1.3em;
+	color : yellow;
+}

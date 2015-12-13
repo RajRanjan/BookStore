@@ -1,0 +1,24 @@
+<ion-view view-title="Book Details">
+    <ion-content>
+        <div class="list card" ng-cloak>
+            <div class="item item-text-wrap" ng-cloak>
+                <h2 style="color:#656262">{{bookDetails.Title}}</h2>
+                <h3 style="color:#656262">Author : {{bookDetails.Author}}</h3>
+                <h3 style="color:#A2A2A2">Pages  : {{bookDetails.Page}}</h3>
+                <p>{{bookDetails.SubTitle}}</p>
+            </div>
+            <div class="item item-image">
+                <img ng-src="{{bookDetails.Image}}" ng-cloak>
+            </div>
+            <a class="readingText item item-text-wrap" style="color:#A2A2A2">
+            {{bookDetails.Description}}
+                
+            </a>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        
+        <h1 class="title" ng-click="downloadBook(bookDetails.Download)">Download</h1>
+        
+    </ion-footer-bar>s
+</ion-view>
